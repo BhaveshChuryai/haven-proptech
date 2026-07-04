@@ -73,3 +73,5 @@
   .contactGrid { grid-template-columns: 1fr; gap: 4rem; }
   .contactBox { padding: 2rem 1.5rem; }
 }
+
+.descSpaced { margin-bottom: 2.5rem; }

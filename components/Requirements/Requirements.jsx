@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import styles from "./Requirements.module.css";
 
 const TABS = ["Land", "Commercial", "Residential"];
-const TAB_ICONS = { Land: "🏞️", Commercial: "🏢", Residential: "🏠" };
+const TAB_ICONS = { Land: "ðŸžï¸", Commercial: "ðŸ¢", Residential: "ðŸ " };
 
 const INITIAL_LAND = { name: "", phone: "", acresRequired: "", budget: "", location: "", purpose: "", message: "" };
 const INITIAL_COMMERCIAL = { name: "", phone: "", propertyType: "", budget: "", location: "", businessType: "", message: "" };
@@ -128,11 +128,11 @@ export default function Requirements() {
       <div className={styles.bgText}>HAVEN</div>
 
       <div className={styles.reqIntro}>
-        <span className="section-eyebrow">Your Requirements</span>
-        <h2 className="section-title">Tell Us What You&apos;re <em>Looking For</em></h2>
+        <span className="section-eyebrow">Post a Requirement</span>
+        <h2 className="section-title">Tell Us What Land <em>You Need</em></h2>
         <div className="section-line" />
         <p className="section-desc">
-          Skip the endless search. Simply share your property needs — we&apos;ll match you with the perfect opportunity from our exclusive portfolio.
+          Skip the endless search. Publish your requirement and let relevant verified owners in the Haven network discover what you need.
         </p>
       </div>
 
@@ -155,8 +155,8 @@ export default function Requirements() {
         <div className={styles.formPanel}>
           <div className={styles.dynamicForm}>
             <div className={styles.formHeader}>
-              <h3 className={styles.formTitle}>Land Enquiry</h3>
-              <p className={styles.formDesc}>7/12 verified parcels · Pre-launch pricing · Investment &amp; farmhouse use</p>
+              <h3 className={styles.formTitle}>Land Requirement</h3>
+              <p className={styles.formDesc}>Owner-led opportunities - Verified discovery - Investment and farmhouse use</p>
             </div>
             <form onSubmit={onSubmit} noValidate>
               <div className={styles.formGrid}>
@@ -186,7 +186,7 @@ export default function Requirements() {
                 </div>
                 <div className={styles.formGroup}>
                   <label>Budget <span className={styles.req}>*</span></label>
-                  <input type="text" placeholder="e.g. ₹50L – ₹1Cr" value={form.budget}
+                  <input type="text" placeholder="e.g. â‚¹50L â€“ â‚¹1Cr" value={form.budget}
                     onChange={(e) => handleChange("budget", e.target.value)}
                     onBlur={() => handleBlur("budget")}
                     className={isInvalid("budget") ? styles.invalid : ""} />
@@ -221,15 +221,15 @@ export default function Requirements() {
               </div>
               <div className={styles.formSubmit}>
                 <button type="submit" className={styles.btnSubmit} disabled={isFormInvalid() && submitted}>
-                  Submit Enquiry →
+                  Post Requirement
                 </button>
                 <span className={styles.formNote}>We&apos;ll contact you within 24 hours</span>
               </div>
             </form>
             {showSuccess && activeTab === "Land" && (
               <div className={styles.formSuccess}>
-                <h4>✦ Enquiry Received</h4>
-                <p>Our team will reach out within 24 hours with the best land options matching your requirements.</p>
+                <h4>Requirement Received</h4>
+                <p>Our team will reach out within 24 hours with the best land opportunities matching your requirement.</p>
               </div>
             )}
           </div>
@@ -242,7 +242,7 @@ export default function Requirements() {
           <div className={styles.dynamicForm}>
             <div className={styles.formHeader}>
               <h3 className={styles.formTitle}>Commercial Enquiry</h3>
-              <p className={styles.formDesc}>Prime commercial spaces · Shops &amp; Offices · Strategic locations</p>
+              <p className={styles.formDesc}>Prime commercial spaces Â· Shops &amp; Offices Â· Strategic locations</p>
             </div>
             <form onSubmit={onSubmit} noValidate>
               <div className={styles.formGrid}>
@@ -278,7 +278,7 @@ export default function Requirements() {
                 </div>
                 <div className={styles.formGroup}>
                   <label>Budget <span className={styles.req}>*</span></label>
-                  <input type="text" placeholder="e.g. ₹30L – ₹80L" value={form.budget}
+                  <input type="text" placeholder="e.g. â‚¹30L â€“ â‚¹80L" value={form.budget}
                     onChange={(e) => handleChange("budget", e.target.value)}
                     onBlur={() => handleBlur("budget")}
                     className={isInvalid("budget") ? styles.invalid : ""} />
@@ -308,14 +308,14 @@ export default function Requirements() {
               </div>
               <div className={styles.formSubmit}>
                 <button type="submit" className={styles.btnSubmit} disabled={isFormInvalid() && submitted}>
-                  Submit Enquiry →
+                  Post Requirement
                 </button>
                 <span className={styles.formNote}>We&apos;ll contact you within 24 hours</span>
               </div>
             </form>
             {showSuccess && activeTab === "Commercial" && (
               <div className={styles.formSuccess}>
-                <h4>✦ Enquiry Received</h4>
+                <h4>Requirement Received</h4>
                 <p>Our commercial properties team will connect with you shortly with curated options.</p>
               </div>
             )}
@@ -329,7 +329,7 @@ export default function Requirements() {
           <div className={styles.dynamicForm}>
             <div className={styles.formHeader}>
               <h3 className={styles.formTitle}>Residential Enquiry</h3>
-              <p className={styles.formDesc}>Premium homes · 1BHK to 4BHK · Family &amp; investment options</p>
+              <p className={styles.formDesc}>Premium homes Â· 1BHK to 4BHK Â· Family &amp; investment options</p>
             </div>
             <form onSubmit={onSubmit} noValidate>
               <div className={styles.formGrid}>
@@ -367,7 +367,7 @@ export default function Requirements() {
                 </div>
                 <div className={styles.formGroup}>
                   <label>Budget <span className={styles.req}>*</span></label>
-                  <input type="text" placeholder="e.g. ₹40L – ₹90L" value={form.budget}
+                  <input type="text" placeholder="e.g. â‚¹40L â€“ â‚¹90L" value={form.budget}
                     onChange={(e) => handleChange("budget", e.target.value)}
                     onBlur={() => handleBlur("budget")}
                     className={isInvalid("budget") ? styles.invalid : ""} />
@@ -402,14 +402,14 @@ export default function Requirements() {
               </div>
               <div className={styles.formSubmit}>
                 <button type="submit" className={styles.btnSubmit} disabled={isFormInvalid() && submitted}>
-                  Submit Enquiry →
+                  Post Requirement
                 </button>
                 <span className={styles.formNote}>We&apos;ll contact you within 24 hours</span>
               </div>
             </form>
             {showSuccess && activeTab === "Residential" && (
               <div className={styles.formSuccess}>
-                <h4>✦ Enquiry Received</h4>
+                <h4>Requirement Received</h4>
                 <p>Our residential team will reach out with perfectly matched property options.</p>
               </div>
             )}
@@ -436,7 +436,7 @@ export default function Requirements() {
                 {lead.propertyType && <span className={styles.leadItem}><strong>Type:</strong> {lead.propertyType}</span>}
                 {lead.configuration && <span className={styles.leadItem}><strong>Config:</strong> {lead.configuration}</span>}
                 {lead.purpose && <span className={styles.leadItem}><strong>Purpose:</strong> {lead.purpose}</span>}
-                <span className={`${styles.leadItem} ${styles.leadId}`}>{lead.id} · {lead.submittedAt}</span>
+                <span className={`${styles.leadItem} ${styles.leadId}`}>{lead.id} Â· {lead.submittedAt}</span>
               </div>
             ))}
           </div>
@@ -445,3 +445,6 @@ export default function Requirements() {
     </section>
   );
 }
+
+
+

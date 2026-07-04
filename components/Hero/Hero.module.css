@@ -1,14 +1,13 @@
-.hero {
+﻿.hero {
   position: relative;
   height: 100vh;
-  min-height: 700px;
+  min-height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-/* VIDEO */
 .heroVideoWrap {
   position: absolute;
   inset: 0;
@@ -21,27 +20,32 @@
   pointer-events: none;
 }
 
-/* OVERLAY */
 .heroOverlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    135deg,
-    rgba(5,5,5,0.85) 0%,
-    rgba(5,5,5,0.55) 50%,
-    rgba(5,5,5,0.8) 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.75)
+    ),
+    rgba(0,0,0,0.55);
 }
 
-/* CONTENT */
 .heroContent {
   position: relative;
   z-index: 2;
-  text-align: center;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 5rem 5% 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .heroEyebrow {
@@ -53,41 +57,45 @@
   margin-bottom: 1.5rem;
 }
 
-/* TEXT */
 .heroTitle {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  line-height: 1.1;
+  font-size: clamp(2.05rem, 4.2vw, 4rem);
+  line-height: 1.04;
   color: #F5F0E8;
 }
+.heroTitle span,
 .heroTitle em {
-  display: inline;
+  display: block;
+}
+.heroTitle em {
   color: #C9A84C;
 }
 
-.heroSubtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  color: #A89880;
-  margin: 1.5rem 0 2.5rem;
-}
-
-/* BUTTONS */
 .heroCta {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
-.btnPrimary {
-  background: #C9A84C;
-  color: #050505;
+.btnPrimary,
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  text-decoration: none;
   padding: 0.8rem 2rem;
-  border: none;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   cursor: pointer;
+}
+.btnPrimary {
+  background: #C9A84C;
+  color: #050505;
+  border: none;
   transition: background 0.4s, transform 0.4s;
 }
 .btnPrimary:hover {
@@ -98,12 +106,6 @@
   border: 1px solid #C9A84C;
   color: #C9A84C;
   background: transparent;
-  padding: 0.8rem 2rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  cursor: pointer;
   transition: all 0.4s;
 }
 .btnOutline:hover {
@@ -111,7 +113,6 @@
   color: #050505;
 }
 
-/* SCROLL */
 .heroScroll {
   position: absolute;
   bottom: 2rem;
@@ -131,4 +132,30 @@
   width: 1px;
   height: 40px;
   background: linear-gradient(180deg, #C9A84C, transparent);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 700px;
+  }
+  .heroContent {
+    padding-top: 5.5rem;
+  }
+  .heroEyebrow {
+    font-size: 0.52rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 1.2rem;
+  }
+  .heroTitle {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+  .heroCta {
+    gap: 0.9rem;
+    margin-top: 1.75rem;
+  }
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+    max-width: 280px;
+  }
 }

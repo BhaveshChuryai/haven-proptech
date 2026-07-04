@@ -1,10 +1,10 @@
-.footer {
+﻿.footer {
   background: #000000; padding: 5rem 5% 2rem;
   border-top: 1px solid rgba(201,168,76,0.15);
 }
 .footerGrid {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem; margin-bottom: 4rem;
+  gap: 3rem; margin-bottom: 3rem;
 }
 .brandName {
   font-family: 'Playfair Display', serif;
@@ -23,11 +23,19 @@
 }
 .footerCol a, .footerCol p {
   display: block; font-size: 0.7rem; color: #A89880;
-  margin-bottom: 0.8rem; cursor: pointer; text-decoration: none;
+  margin-bottom: 0.8rem; text-decoration: none;
   transition: color 0.4s;
 }
 .footerCol a:hover { color: #C9A84C; }
 .highlight { color: #C9A84C !important; }
+.disclaimer {
+  max-width: 980px;
+  color: rgba(168,152,128,0.62);
+  font-size: 0.62rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  margin: 0 0 2rem;
+}
 
 .footerBottom {
   display: flex; justify-content: space-between; align-items: center;

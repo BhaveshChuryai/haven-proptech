@@ -35,3 +35,5 @@
 }
 .btnEnquire:hover { background: #C9A84C; color: #050505; }
 @media (max-width: 900px) { .landGrid { grid-template-columns: 1fr; gap: 3rem; } }
+
+.descSpaced { margin-bottom: 2.5rem; }

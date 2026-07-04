@@ -1,0 +1,66 @@
+﻿.workSection {
+  position: relative;
+  padding: 6rem 5%;
+  background: #050505;
+  overflow: hidden;
+}
+.workSection::before {
+  content: "HAVEN";
+  position: absolute;
+  inset: auto 4% 8% auto;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(5rem, 16vw, 14rem);
+  font-weight: 900;
+  color: rgba(201,168,76,0.035);
+  pointer-events: none;
+}
+.sectionHead {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto 2.4rem;
+}
+.cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.card {
+  min-height: 240px;
+  padding: 2rem;
+  border: 1px solid rgba(201,168,76,0.16);
+  background: linear-gradient(180deg, rgba(17,17,17,0.96), rgba(8,8,8,0.96));
+  animation: fadeSlide 0.7s ease both;
+}
+.card:nth-child(2) { animation-delay: 0.08s; }
+.card:nth-child(3) { animation-delay: 0.16s; }
+.step {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #C9A84C;
+  margin-bottom: 1.4rem;
+}
+.card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #F5F0E8;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.card p {
+  color: #A89880;
+  font-size: 0.76rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    min-height: auto;
+  }
+}

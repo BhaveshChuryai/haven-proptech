@@ -1,6 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useRef, useEffect } from "react";
+import Link from "next/link";
+import TrustStrip from "@/components/TrustStrip/TrustStrip";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -15,13 +17,8 @@ export default function Hero() {
     });
   }, []);
 
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section id="home" className={styles.hero}>
-      {/* VIDEO BACKGROUND */}
       <div className={styles.heroVideoWrap}>
         <video
           ref={videoRef}
@@ -35,32 +32,28 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* DARK OVERLAY */}
       <div className={styles.heroOverlay} />
 
-      {/* CONTENT */}
       <div className={styles.heroContent}>
-        <div className={styles.heroEyebrow}>Premium Real Estate</div>
+        <div className={styles.heroEyebrow}>Premium Land Matchmaking Platform</div>
 
         <h1 className={styles.heroTitle}>
-          Where Vision<br />Meets <em>Value.</em>
+          <span>Don&apos;t Search for Land.</span>
+          <em>Let the Right Land Find You.</em>
         </h1>
 
-        <p className={styles.heroSubtitle}>
-          Premium land &amp; property investment across Khopoli &amp; Mumbai
-        </p>
-
         <div className={styles.heroCta}>
-          <button className={styles.btnPrimary} onClick={() => scrollTo("projects")}>
-            Explore Projects
-          </button>
-          <button className={styles.btnOutline} onClick={() => scrollTo("requirements")}>
-            Submit Requirements
-          </button>
+          <Link className={styles.btnPrimary} href="/requirements">
+            Post a Requirement
+          </Link>
+          <Link className={styles.btnOutline} href="/vault">
+            Enter the Vault
+          </Link>
         </div>
+
+        <TrustStrip />
       </div>
 
-      {/* SCROLL */}
       <div className={styles.heroScroll}>
         <span>Scroll</span>
         <div className={styles.scrollLine} />

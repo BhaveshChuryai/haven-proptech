@@ -90,3 +90,5 @@
   .aboutLayout { grid-template-columns: 1fr; gap: 3rem; }
   .aboutStats { flex-direction: column; }
 }
+
+.descSpaced { margin-top: 0.8rem; }

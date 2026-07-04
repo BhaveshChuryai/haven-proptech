@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { plots } from "@/data/projects";
 import styles from "./Land.module.css";
@@ -31,7 +31,7 @@ export default function Land() {
             {/* Amenity */}
             <rect x="215" y="185" width="130" height="55" fill="rgba(201,168,76,0.04)" stroke="rgba(201,168,76,0.15)" strokeWidth="0.8" />
             <text x="280" y="208" fill="rgba(201,168,76,0.35)" fontSize="7" textAnchor="middle" fontFamily="Montserrat">AMENITY BLOCK</text>
-            <text x="280" y="222" fill="rgba(201,168,76,0.2)" fontSize="5" textAnchor="middle" fontFamily="Montserrat">CLUBHOUSE · PARKING</text>
+            <text x="280" y="222" fill="rgba(201,168,76,0.2)" fontSize="5" textAnchor="middle" fontFamily="Montserrat">CLUBHOUSE Â· PARKING</text>
 
             {/* Dynamic plots from data */}
             {plots.map((plot) => (
@@ -86,7 +86,7 @@ export default function Land() {
             <text x="35" y="328" fill="rgba(201,168,76,0.5)" fontSize="5" fontFamily="Montserrat">Available</text>
             <rect x="100" y="320" width="10" height="8" fill="rgba(201,168,76,0.12)" stroke="#C9A84C" strokeWidth="1" />
             <text x="115" y="328" fill="rgba(201,168,76,0.5)" fontSize="5" fontFamily="Montserrat">Booked</text>
-            <text x="200" y="328" fill="rgba(201,168,76,0.3)" fontSize="5" fontFamily="Montserrat">© Haven Group – Plot Layout (Indicative)</text>
+            <text x="200" y="328" fill="rgba(201,168,76,0.3)" fontSize="5" fontFamily="Montserrat">Â© Haven Group â€“ Plot Layout (Indicative)</text>
           </svg>
         </div>
 
@@ -95,27 +95,27 @@ export default function Land() {
           <span className="section-eyebrow">Land Portfolio</span>
           <h2 className="section-title">Verified Plots &amp; <em>Land Parcels</em></h2>
           <div className="section-line" />
-          <p className="section-desc" style={{ marginBottom: '2.5rem' }}>
+          <p className={`section-desc ${styles.descSpaced}`}>
             Strategically located land across high-growth corridors. Each parcel is documented, legally verified, and ready for immediate investment or development.
           </p>
 
           <div className={styles.landBadges}>
             <div className={styles.landBadge}>
-              <div className={styles.badgeIcon}>📋</div>
+              <div className={styles.badgeIcon}>ðŸ“‹</div>
               <div>
                 <h5>7/12 Verified Land</h5>
                 <p>All parcels come with complete 7/12 documentation, mutation entries, and clear title certificates.</p>
               </div>
             </div>
             <div className={styles.landBadge}>
-              <div className={styles.badgeIcon}>🗺️</div>
+              <div className={styles.badgeIcon}>ðŸ—ºï¸</div>
               <div>
                 <h5>Structured Plot Layout</h5>
                 <p>Planned layouts with internal roads, green zones, and defined boundaries for maximum utility.</p>
               </div>
             </div>
             <div className={styles.landBadge}>
-              <div className={styles.badgeIcon}>⚡</div>
+              <div className={styles.badgeIcon}>âš¡</div>
               <div>
                 <h5>Pre-Launch Opportunities</h5>
                 <p>Get early access to upcoming parcels at pre-launch pricing. Limited plots, priority allocation.</p>
@@ -124,10 +124,11 @@ export default function Land() {
           </div>
 
           <button className={styles.btnEnquire} onClick={() => scrollTo("requirements")}>
-            Enquire About Land →
+            Enquire About Land â†’
           </button>
         </div>
       </div>
     </section>
   );
 }
+

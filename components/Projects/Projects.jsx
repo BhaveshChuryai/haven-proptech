@@ -1,4 +1,4 @@
-import { projects } from "@/data/projects";
+﻿import { projects } from "@/data/projects";
 import styles from "./Projects.module.css";
 
 export default function Projects() {
@@ -14,9 +14,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      <span className="section-eyebrow">Our Portfolio</span>
-      <h2 className="section-title">Current <em>Projects</em></h2>
-      <div className="section-line" style={{ marginBottom: '3rem' }} />
+      <span className="section-eyebrow">The Vault</span>
+      <h2 className="section-title">Verified <em>Opportunities</em></h2>
+      <div className={`section-line ${styles.sectionLineSpaced}`} />
 
       <div className={styles.projectsGrid}>
         {projects.map((project) => (
@@ -38,3 +38,4 @@ export default function Projects() {
     </section>
   );
 }
+

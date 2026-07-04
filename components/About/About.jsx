@@ -1,4 +1,4 @@
-import styles from "./About.module.css";
+﻿import styles from "./About.module.css";
 
 const founders = [
   {
@@ -12,20 +12,20 @@ const founders = [
     initial: "M",
     name: "Madhu Churyai",
     title: "Co-Founder",
-    bio: "A key pillar of the organization, bringing years of real estate knowledge and deep market understanding across the Khopoli–Mumbai corridor. Instrumental in building strong developer and landowner relationships.",
+    bio: "A key pillar of the organization, bringing years of real estate knowledge and deep market understanding across the Khopoliâ€“Mumbai corridor. Instrumental in building strong developer and landowner relationships.",
     skills: ["Market Intelligence", "Land Acquisition", "Developer Relations"],
   },
   {
     initial: "B",
     name: "Bhavesh Churyai",
     title: "Chief Executive Officer",
-    bio: "Driving HAVEN GROUP's vision to build a modern, technology-driven real estate platform. Focused on combining digital experience with real-world execution — ensuring transparency, efficiency, and client satisfaction across every project.",
+    bio: "Driving HAVEN GROUP's vision to build a modern, technology-driven real estate platform. Focused on combining digital experience with real-world execution â€” ensuring transparency, efficiency, and client satisfaction across every project.",
     skills: ["Strategy", "Project Onboarding", "Broker Relations", "Marketing"],
   },
 ];
 
 const stats = [
-  { num: "2–4", label: "Years Experience" },
+  { num: "2â€“4", label: "Years Experience" },
   { num: "50+", label: "Clients Served" },
   { num: "2", label: "Key Markets" },
 ];
@@ -50,7 +50,7 @@ export default function About() {
             ))}
           </div>
           <div className={styles.aboutTagline}>
-            "Connecting People to Premium Properties Across High-Growth Regions"
+            &quot;Connecting Serious Buyers With Verified Land Owners&quot;
           </div>
         </div>
 
@@ -62,10 +62,10 @@ export default function About() {
           </h2>
           <div className="section-line"></div>
           <p className="section-desc">
-            HAVEN GROUP is a modern real estate firm delivering premium land and property investment across high-growth regions of Khopoli and Mumbai — combining strong market expertise with a client-first, technology-driven approach.
+            HAVEN GROUP is a premium PropTech land matchmaking platform connecting serious buyers directly with verified land owners across Maharashtra and Goa.
           </p>
-          <p className="section-desc" style={{ marginTop: "0.8rem" }}>
-            The company operates as a complete real estate solutions firm, handling project onboarding, marketing strategy, sales execution, and broker &amp; channel partner collaboration.
+          <p className={`section-desc ${styles.descSpaced}`}>
+            The platform is built around precise requirement discovery, verified owner networks, and direct land opportunity evaluation without long brokerage chains.
           </p>
 
           {/* Founders */}
@@ -95,7 +95,7 @@ export default function About() {
           <div className={styles.missionBox}>
             <div className={styles.missionLabel}>Our Mission</div>
             <div className={styles.missionText}>
-              "To build trust and create future-ready investment opportunities."
+              &quot;To make premium land discovery more direct, transparent, and requirement-led.&quot;
             </div>
           </div>
         </div>
@@ -103,3 +103,6 @@ export default function About() {
     </section>
   );
 }
+
+
+

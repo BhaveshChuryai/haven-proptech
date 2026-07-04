@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -12,28 +13,24 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <div className={styles.logo}>
+      <Link href="/" className={styles.logo} aria-label="Haven Group home">
         <span className={styles.logoMain}>Haven Group</span>
-        <span className={styles.logoSub}>Premium Real Estate</span>
-      </div>
+        <span className={styles.logoSub}>Premium Land Matchmaking Platform</span>
+      </Link>
 
-      <nav className={styles.nav}>
-        <a onClick={() => scrollTo("home")}>Home</a>
-        <a onClick={() => scrollTo("land")}>Land</a>
-        <a onClick={() => scrollTo("projects")}>Projects</a>
-        <a onClick={() => scrollTo("about")}>About</a>
-        <a onClick={() => scrollTo("contact")}>Contact</a>
+      <nav className={styles.nav} aria-label="Primary navigation">
+        <Link href="/">Home</Link>
+        <Link href="/community">Community</Link>
+        <Link href="/vault">The Vault</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
 
-      <button className={styles.btnPrimary} onClick={() => scrollTo("contact")}>
-        Book Site Visit
-      </button>
+      <Link className={styles.btnPrimary} href="/login">
+        Client Login
+      </Link>
     </header>
   );
 }

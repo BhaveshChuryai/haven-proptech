@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import styles from "./Contact.module.css";
@@ -42,7 +42,7 @@ export default function Contact() {
     setLoading(true);
 
     const leadData = {
-      type: "Site Visit",
+      type: "Requirement Call",
       name: form.name,
       phone: form.phone,
       date: form.date,
@@ -75,30 +75,30 @@ export default function Contact() {
             Connect With <em>Our Team</em>
           </h2>
           <div className="section-line"></div>
-          <p className="section-desc" style={{ marginBottom: "2.5rem" }}>
-            Whether you&apos;re looking for an investment parcel or a premium commercial space, our advisors are ready to assist you.
+          <p className={`section-desc ${styles.descSpaced}`}>
+            Whether you are posting a land requirement or exploring verified opportunities, the Haven team is ready to help you move with clarity.
           </p>
 
           <div className={styles.infoCards}>
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>📞</div>
+              <div className={styles.infoIcon}>ðŸ“ž</div>
               <div className={styles.infoData}>
                 <span className={styles.infoLbl}>Direct Line</span>
                 <span className={styles.infoVal}>+91 98200 98200</span>
               </div>
             </div>
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>✉️</div>
+              <div className={styles.infoIcon}>âœ‰ï¸</div>
               <div className={styles.infoData}>
                 <span className={styles.infoLbl}>Email</span>
                 <span className={styles.infoVal}>invest@havengroup.in</span>
               </div>
             </div>
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>📍</div>
+              <div className={styles.infoIcon}>ðŸ“</div>
               <div className={styles.infoData}>
                 <span className={styles.infoLbl}>Key Markets</span>
-                <span className={styles.infoVal}>Khopoli · Mumbai</span>
+                <span className={styles.infoVal}>Maharashtra & Goa</span>
               </div>
             </div>
           </div>
@@ -107,8 +107,8 @@ export default function Contact() {
         {/* Form Box */}
         <div className={styles.contactBox}>
           <div className={styles.boxHeader}>
-            <h3>Schedule a Site Visit</h3>
-            <p>Experience the property firsthand. Book a guided tour with our experts.</p>
+            <h3>Start a Requirement Call</h3>
+            <p>Share your preferred land profile and our team will help route your requirement through the Haven network.</p>
           </div>
           
           <form className={styles.contactForm} onSubmit={onSubmit} noValidate>
@@ -137,7 +137,7 @@ export default function Contact() {
             </div>
             
             <div className={styles.formGroup}>
-              <label>Preferred Date <span className={styles.req}>*</span></label>
+              <label>Preferred Call Date <span className={styles.req}>*</span></label>
               <input
                 type="date"
                 value={form.date}
@@ -152,12 +152,12 @@ export default function Contact() {
               className={styles.btnSubmit}
               disabled={loading || (submitted && isFormInvalid())}
             >
-              {loading ? "Processing..." : "Confirm Booking"}
+              {loading ? "Processing..." : "Confirm Request"}
             </button>
             
             {success && (
               <div className={styles.successMsg}>
-                Site visit requested successfully. Our team will call you to confirm the timing.
+                Requirement Call requested successfully. Our team will call you to confirm the timing.
               </div>
             )}
           </form>
@@ -166,3 +166,5 @@ export default function Contact() {
     </section>
   );
 }
+
+
