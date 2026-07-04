@@ -1,0 +1,92 @@
+.aboutSection { padding: 7rem 5%; background: #050505; }
+.aboutLayout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: start; }
+
+/* Visual */
+.aboutVisual { display: flex; flex-direction: column; gap: 1.5rem; }
+.aboutEmblem {
+  width: 100%; aspect-ratio: 1; max-width: 380px;
+  background: #111111; border: 1px solid #1C1C1C;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.emblemRing {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.08);
+}
+.ring1 { inset: 15%; }
+.ring2 { inset: 28%; }
+.emblemText {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem; font-weight: 900;
+  color: rgba(201,168,76,0.1);
+  letter-spacing: -0.05em; position: relative; z-index: 1;
+}
+.aboutStats { display: flex; gap: 1rem; }
+.aboutStat {
+  flex: 1; background: #111111;
+  border: 1px solid #1C1C1C; border-top: 2px solid #C9A84C;
+  padding: 1.2rem; text-align: center;
+}
+.statNum {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 700; color: #C9A84C;
+}
+.statLbl {
+  font-size: 0.6rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase; color: #A89880; margin-top: 0.2rem;
+}
+.aboutTagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem; font-style: italic; color: rgba(201,168,76,0.5);
+  line-height: 1.6; padding: 1rem;
+  border-left: 2px solid rgba(201,168,76,0.2);
+}
+
+/* Content */
+.foundersList { display: flex; flex-direction: column; gap: 0; margin: 2.5rem 0; }
+.founderCard {
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #1C1C1C;
+}
+.founderCard:last-child { border-bottom: none; }
+.founderTop { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
+.founderAvatar {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 700; color: #C9A84C;
+}
+.founderName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 600; color: #F5F0E8;
+}
+.founderTitle {
+  font-size: 0.6rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #C9A84C; margin-top: 0.15rem;
+}
+.founderBio { font-size: 0.72rem; color: #A89880; line-height: 1.8; margin-bottom: 0.8rem; }
+.skillsList { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skillTag {
+  font-size: 0.58rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #8B6914; border: 1px solid rgba(201,168,76,0.2); padding: 0.25rem 0.6rem;
+}
+
+.missionBox {
+  background: #111111; border: 1px solid #1C1C1C;
+  border-left: 3px solid #C9A84C; padding: 1.5rem;
+}
+.missionLabel {
+  font-size: 0.55rem; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase; color: #C9A84C; margin-bottom: 0.5rem;
+}
+.missionText {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-style: italic; color: #F5F0E8; line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .aboutLayout { grid-template-columns: 1fr; gap: 3rem; }
+  .aboutStats { flex-direction: column; }
+}

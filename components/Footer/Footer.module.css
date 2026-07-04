@@ -1,0 +1,48 @@
+.footer {
+  background: #000000; padding: 5rem 5% 2rem;
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+.footerGrid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 4rem;
+}
+.brandName {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 900;
+  letter-spacing: 0.15em; color: #C9A84C; margin-bottom: 0.2rem;
+}
+.brandSub {
+  font-size: 0.55rem; font-weight: 300;
+  letter-spacing: 0.45em; text-transform: uppercase; color: #A89880; margin-bottom: 1.5rem;
+}
+.brandDesc { font-size: 0.72rem; color: #A89880; line-height: 1.8; max-width: 280px; }
+
+.footerCol h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-style: italic; color: #F5F0E8; margin-bottom: 1.2rem;
+}
+.footerCol a, .footerCol p {
+  display: block; font-size: 0.7rem; color: #A89880;
+  margin-bottom: 0.8rem; cursor: pointer; text-decoration: none;
+  transition: color 0.4s;
+}
+.footerCol a:hover { color: #C9A84C; }
+.highlight { color: #C9A84C !important; }
+
+.footerBottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 2rem; border-top: 1px solid #1C1C1C;
+}
+.copyright, .techStack {
+  font-size: 0.6rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(168,152,128,0.5);
+}
+.techAccent { color: #C9A84C; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .footerGrid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .footerBottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+@media (max-width: 500px) {
+  .footerGrid { grid-template-columns: 1fr; }
+}

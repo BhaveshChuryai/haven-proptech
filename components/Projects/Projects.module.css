@@ -1,0 +1,46 @@
+.projectsSection { padding: 7rem 5%; background: #0D0D0D; }
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.projectCard {
+  background: #111111; border: 1px solid #1C1C1C; overflow: hidden;
+  transition: transform 0.4s, border-color 0.4s; position: relative;
+}
+.projectCard:hover { transform: translateY(-6px); border-color: rgba(201,168,76,0.3); }
+.projectThumb {
+  height: 180px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1500 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.projectThumb::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.6) 100%);
+}
+.projectIcon { font-size: 2.5rem; color: rgba(201,168,76,0.15); }
+.projectStatus {
+  position: absolute; top: 0.8rem; right: 0.8rem;
+  font-size: 0.55rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.7rem; z-index: 1;
+}
+.statusSoon        { background: #C9A84C; color: #050505; }
+.statusNegotiation { background: rgba(201,168,76,0.15); color: #C9A84C; border: 1px solid #8B6914; }
+.statusPreLaunch   { background: rgba(201,168,76,0.2); color: #E8C97A; border: 1px solid #C9A84C; }
+.statusAvailable   { background: rgba(46,204,113,0.15); color: #2ecc71; border: 1px solid rgba(46,204,113,0.3); }
+.projectBody { padding: 1.5rem; }
+.projectType {
+  font-size: 0.58rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #C9A84C; margin-bottom: 0.4rem;
+}
+.projectName {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 700; color: #F5F0E8; margin-bottom: 0.5rem;
+}
+.projectLocation {
+  font-size: 0.65rem; color: #A89880;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.projectLocation::before { content: '◎'; color: #C9A84C; font-size: 0.5rem; }

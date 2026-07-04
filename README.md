@@ -1,117 +1,34 @@
-# 🔥 HAVEN GROUP – Real Estate Platform
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A premium Angular-based real estate requirement platform.
+## Getting Started
 
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js v16+ → https://nodejs.org
-- Angular CLI → `npm install -g @angular/cli`
-
-### Installation & Run
+First, run the development server:
 
 ```bash
-# 1. Extract the ZIP and open the folder
-cd haven-group
-
-# 2. Install dependencies
-npm install
-
-# 3. Start development server
-ng serve
-
-# 4. Open browser
-# Visit: http://localhost:4200
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🎬 Adding Your Hero Video
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-Place your video file here:
-```
-src/assets/hero-video.mp4
-```
+## Learn More
 
-The `<video>` tag in `hero.component.html` already points to this path.
-Supported formats: `.mp4` (recommended), `.webm`
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 📁 Project Structure
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```
-haven-group/
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   │   ├── header/          ← Fixed nav, scroll effect
-│   │   │   ├── hero/            ← Full-screen video section
-│   │   │   ├── requirements/    ← Dynamic forms (Land/Commercial/Residential)
-│   │   │   ├── land/            ← SVG plot map + land info
-│   │   │   ├── projects/        ← Project cards from service
-│   │   │   ├── about/           ← Founders + mission
-│   │   │   ├── contact/         ← Contact info + site visit form
-│   │   │   └── footer/          ← Links + copyright
-│   │   ├── services/
-│   │   │   ├── lead.service.ts      ← Stores & manages form submissions
-│   │   │   └── project.service.ts   ← Serves project & plot data as JSON
-│   │   ├── models/
-│   │   │   ├── lead.model.ts        ← Lead interface (TypeScript)
-│   │   │   └── project.model.ts     ← Project & LandPlot interfaces
-│   │   ├── app.module.ts            ← ReactiveFormsModule + HttpClientModule
-│   │   └── app-routing.module.ts    ← Angular Routing
-│   ├── styles.css                   ← Global styles + CSS variables
-│   └── index.html
-├── angular.json
-├── package.json
-├── tsconfig.json
-└── tsconfig.app.json
-```
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## ⚙️ Angular Features Used
-
-| Feature | Usage |
-|---|---|
-| **Reactive Forms** | All 3 enquiry forms + contact form |
-| **FormBuilder** | Building FormGroups with Validators |
-| **Validators** | Required, pattern (phone), minLength |
-| **HttpClient** | API-ready lead submission |
-| **BehaviorSubject** | Live lead list updates |
-| **NgFor / NgIf** | Dynamic rendering of forms, cards, leads |
-| **HostListener** | Scroll detection for header effect |
-| **Services** | LeadService, ProjectService |
-| **Routing** | AppRoutingModule configured |
-| **TypeScript Models** | Lead, Project, LandPlot interfaces |
-
----
-
-## 🔌 Connecting a Real Backend
-
-In `lead.service.ts`, replace:
-```typescript
-private apiUrl = 'https://api.havengroup.in/leads';
-```
-With your actual API endpoint. The service already calls `HttpClient.post()`.
-
----
-
-## 🏗️ Build for Production
-
-```bash
-ng build --configuration production
-```
-Output will be in `dist/haven-group/`
-
----
-
-## 📞 Contact
-
-- Anisha Churyai — 93243 92300
-- Bhavesh Churyai — 74995 64957
-- anishachuryai01082020@gmail.com
-- ombhaveshchuryai@gmail.com
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
