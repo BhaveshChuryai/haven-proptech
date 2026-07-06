@@ -1,15 +1,15 @@
-﻿import PageShell from "@/components/PageShell/PageShell";
-import RouteIntro from "@/components/RouteIntro/RouteIntro";
+import LoginForm from "./LoginForm.jsx";
+import PageShell from "@/components/PageShell/PageShell";
+
+export const metadata = {
+  title: "Client Login — Haven Group | Private Access",
+  description: "Sign in to the Haven client portal to track your land requirements and access private opportunities.",
+};
 
 export default function LoginPage() {
   return (
     <PageShell>
-      <RouteIntro
-        eyebrow="Client Login"
-        title="Private Access"
-        highlight="Coming Soon"
-        description="The Haven client portal is being prepared for requirement tracking and private opportunity discovery."
-      />
+      <LoginForm />
     </PageShell>
   );
 }

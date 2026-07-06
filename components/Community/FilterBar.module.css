@@ -1,0 +1,108 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 1rem 1.4rem;
+  background: #111111;
+  border: 1px solid #1C1C1C;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #1C1C1C;
+  flex-shrink: 0;
+}
+
+/* Sort */
+.sortGroup {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.sortBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #A89880;
+  background: transparent;
+  border: 1px solid #1C1C1C;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sortBtn:hover { border-color: rgba(201, 168, 76, 0.3); color: #C9A84C; }
+
+.sortActive {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: #C9A84C;
+  color: #C9A84C;
+}
+
+/* Region chips */
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #A89880;
+  background: transparent;
+  border: 1px solid #1C1C1C;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.chip:hover { border-color: rgba(201, 168, 76, 0.3); color: #E8C97A; }
+
+.chipActive {
+  background: #C9A84C;
+  border-color: #C9A84C;
+  color: #050505;
+}
+
+/* Purpose */
+.purposeGroup {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.purposeBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #A89880;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.purposeBtn:hover { color: #E8C97A; }
+
+.purposeActive {
+  color: #C9A84C;
+  border-color: rgba(201, 168, 76, 0.3);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+@media (max-width: 768px) {
+  .divider { display: none; }
+  .filterBar { gap: 0.6rem; }
+}

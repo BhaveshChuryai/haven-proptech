@@ -1,0 +1,88 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 1.5rem;
+}
+
+.terminal {
+  width: 100%;
+  max-width: 420px;
+  background: #0A0A0A;
+  border: 1px solid #1C1C1C;
+  font-family: 'Courier New', monospace;
+}
+
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  background: #141414;
+  border-bottom: 1px solid #1C1C1C;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.termTitle {
+  font-size: 0.55rem;
+  color: #A89880;
+  margin-left: auto;
+  letter-spacing: 0.08em;
+}
+
+.termBody {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.termLine {
+  font-size: 0.65rem;
+  color: #A89880;
+  line-height: 1.5;
+}
+
+.prompt { color: #C9A84C; margin-right: 0.4em; }
+.termResult { color: #F5F0E8; }
+.termGold { color: #C9A84C; }
+
+.termCursor {
+  font-size: 0.65rem;
+  color: #C9A84C;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.caption {
+  font-size: 0.68rem;
+  color: #A89880;
+  text-align: center;
+}
+
+.ctaBtn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #050505;
+  background: #C9A84C;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.ctaBtn:hover { background: #E8C97A; transform: translateY(-2px); }

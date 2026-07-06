@@ -1,0 +1,318 @@
+.loginSection {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #0D0D0D;
+}
+
+/* Login card (left) */
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 8%;
+  background: #0D0D0D;
+}
+
+/* Logo mark */
+.logoMark {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoRing {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 50%;
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.logoText {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #C9A84C;
+  letter-spacing: 0.08em;
+}
+
+/* Title */
+.loginTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #F5F0E8;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.loginTitle em {
+  font-style: italic;
+  color: #C9A84C;
+}
+
+.loginDesc {
+  font-size: 0.72rem;
+  color: #A89880;
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 340px;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #A89880;
+}
+
+.req { color: #C9A84C; margin-left: 2px; }
+
+.input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1C1C1C;
+  color: #F5F0E8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  padding: 0.85rem 1rem;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+  width: 100%;
+}
+
+.input:focus { border-color: rgba(201, 168, 76, 0.5); background: rgba(201, 168, 76, 0.03); }
+.input::placeholder { color: rgba(255, 255, 255, 0.2); }
+.inputErr { border-color: #c0392b !important; }
+.errMsg { font-size: 0.6rem; color: #e74c3c; }
+
+.submitBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #050505;
+  background: #C9A84C;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.3rem;
+}
+
+.submitBtn:hover:not(:disabled) { background: #E8C97A; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201, 168, 76, 0.2); }
+.submitBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.backBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  color: #A89880;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.backBtn:hover { color: #C9A84C; }
+
+/* OTP inputs */
+.otpRow {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.otpInput {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #C9A84C;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1C1C1C;
+  outline: none;
+  transition: all 0.3s;
+  caret-color: #C9A84C;
+}
+
+.otpInput:focus {
+  border-color: #C9A84C;
+  background: rgba(201, 168, 76, 0.05);
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.1);
+}
+
+/* Footer note */
+.footerNote {
+  margin-top: 2rem;
+  font-size: 0.6rem;
+  color: #A89880;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.emailLink { color: #C9A84C; text-decoration: none; }
+.emailLink:hover { text-decoration: underline; }
+.emailHighlight { color: #F5F0E8; font-style: normal; }
+
+/* Success state */
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 2rem;
+  color: #2ecc71;
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.1); }
+}
+
+.successBar {
+  width: 100%;
+  max-width: 200px;
+  height: 2px;
+  background: #1C1C1C;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.successBarFill {
+  height: 100%;
+  width: 0;
+  background: #C9A84C;
+  animation: fill 2s ease forwards;
+}
+
+@keyframes fill {
+  to { width: 100%; }
+}
+
+/* Decorative panel (right) */
+.decorPanel {
+  background: linear-gradient(135deg, #080808 0%, #0f0d00 60%, #0D0D0D 100%);
+  border-left: 1px solid #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 8%;
+  gap: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.decorPanel::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.decorEmblem {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.decorRing,
+.decorRing2 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.decorRing {
+  inset: 0;
+  animation: spin 20s linear infinite;
+}
+
+.decorRing2 {
+  inset: 20px;
+  border-color: rgba(201, 168, 76, 0.08);
+  animation: spin 30s linear infinite reverse;
+}
+
+.decorQuote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-style: italic;
+  color: rgba(201, 168, 76, 0.6);
+  text-align: center;
+  line-height: 1.5;
+  max-width: 340px;
+}
+
+.decorStats {
+  display: flex;
+  gap: 3rem;
+}
+
+.decorStat {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.decorStatNum {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #C9A84C;
+}
+
+.decorStatLbl {
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #A89880;
+}
+
+@media (max-width: 900px) {
+  .loginSection { grid-template-columns: 1fr; }
+  .decorPanel { display: none; }
+  .loginCard { padding: 5rem 6%; }
+}

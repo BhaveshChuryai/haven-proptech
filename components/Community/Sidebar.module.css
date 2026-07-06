@@ -1,0 +1,126 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.widget {
+  background: #111111;
+  border: 1px solid #1C1C1C;
+  padding: 1.4rem;
+}
+
+.widgetTitle {
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #1C1C1C;
+}
+
+/* Activity stats */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.stat {}
+
+.statVal {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #F5F0E8;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.5rem;
+  color: #A89880;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Trending regions */
+.regionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.regionRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.regionRank {
+  font-size: 0.5rem;
+  color: #C9A84C;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.regionName {
+  font-size: 0.62rem;
+  color: #F5F0E8;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.regionBar {
+  flex: 1;
+  height: 3px;
+  background: #1C1C1C;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.regionBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #C9A84C, #E8C97A);
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+.regionCount {
+  font-size: 0.55rem;
+  color: #A89880;
+  font-family: 'Courier New', monospace;
+  width: 16px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Info widget */
+.infoWidget {}
+
+.infoText {
+  font-size: 0.62rem;
+  color: #A89880;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.infoMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.infoMeta span {
+  font-size: 0.58rem;
+  color: #C9A84C;
+  letter-spacing: 0.08em;
+}
